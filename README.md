@@ -1,5 +1,5 @@
 # MachineLearning
- Simple Neural Network Implementation in C++
+ Simple Neural Network Implementation in C++ running on the CPU using OpenMP
 
 To compile for linux systems run: make all  
 
