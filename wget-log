@@ -1,0 +1,17 @@
+--2023-08-24 17:24:30--  https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
+Resolving apt.repos.intel.com (apt.repos.intel.com)... 104.96.158.200, 2a02:26f0:fa00:1b9::4b23, 2a02:26f0:fa00:1ae::4b23, ...
+Connecting to apt.repos.intel.com (apt.repos.intel.com)|104.96.158.200|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3796 (3.7K) [binary/octet-stream]
+Saving to: ‘STDOUT’
+
+-                                                          0%[                                                                                                                                ]       0  --.-KB/s               -                                                        100%[===============================================================================================================================>]   3.71K  --.-KB/s    in 0s      
+
+2023-08-24 17:24:31 (1.11 GB/s) - written to stdout [3796/3796]
+
+--2023-08-24 17:24:31--  http://%20/
+Resolving   ( )... failed: Name or service not known.
+wget: unable to resolve host address ‘ ’
+FINISHED --2023-08-24 17:24:31--
+Total wall clock time: 0.5s
+Downloaded: 1 files, 3.7K in 0s (1.11 GB/s)
