@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 #include <vector>
 
 #include "lib/matrixOperations.h"
@@ -40,7 +41,7 @@ VECTOR2D trainResults =
 }
 
 
-void trainMnist(NETWORK &network, int epochs){
+void trainMnist(NETWORK &network, int epochs,int imageNum){
     VECTOR2D trainData;
     VECTOR2D trainResults;
     VECTOR2D runData;
@@ -53,8 +54,8 @@ void trainMnist(NETWORK &network, int epochs){
         VECTOR2D mnistRunResults;
 
         
-        ReadMNISTimage("datasets/mnist/training/train-images.idx3-ubyte",1000,784,mnistTrainData);
-        ReadMNISTlabel("datasets/mnist/training/train-labels.idx1-ubyte",1000,1,mnistTrainResults);
+        ReadMNISTimage("datasets/mnist/training/train-images.idx3-ubyte",imageNum,784,mnistTrainData);
+        ReadMNISTlabel("datasets/mnist/training/train-labels.idx1-ubyte",imageNum,1,mnistTrainResults);
         ReadMNISTimage("datasets/mnist/testing/t10k-images.idx3-ubyte",10,784,mnistRunData);
         ReadMNISTlabel("datasets/mnist/testing/t10k-labels.idx1-ubyte",10,1,mnistRunResults);
 
@@ -88,7 +89,7 @@ void trainMnist(NETWORK &network, int epochs){
     }
 }
 
-void runMnist(NETWORK network){
+void runMnist(NETWORK network, int imageNum){
     VECTOR2D trainData;
     VECTOR2D trainResults;
     VECTOR2D runData;
@@ -101,10 +102,10 @@ void runMnist(NETWORK network){
         VECTOR2D mnistRunResults;
 
         
-        ReadMNISTimage("datasets/mnist/training/train-images.idx3-ubyte",100,784,mnistTrainData);
-        ReadMNISTlabel("datasets/mnist/training/train-labels.idx1-ubyte",100,1,mnistTrainResults);
-        ReadMNISTimage("datasets/mnist/testing/t10k-images.idx3-ubyte",10,784,mnistRunData);
-        ReadMNISTlabel("datasets/mnist/testing/t10k-labels.idx1-ubyte",10,1,mnistRunResults);
+        ReadMNISTimage("datasets/mnist/training/train-images.idx3-ubyte",imageNum,784,mnistTrainData);
+        ReadMNISTlabel("datasets/mnist/training/train-labels.idx1-ubyte",imageNum,1,mnistTrainResults);
+        ReadMNISTimage("datasets/mnist/testing/t10k-images.idx3-ubyte",imageNum,784,mnistRunData);
+        ReadMNISTlabel("datasets/mnist/testing/t10k-labels.idx1-ubyte",imageNum,1,mnistRunResults);
 
         trainData = mnistTrainData;
         trainResults.resize(mnistTrainResults.size());
@@ -209,8 +210,11 @@ void readNetwork(std::string filename, NETWORK &network){
 }
 
 
-int main(){
+int main(int argc, char** argv){
     
+    int numEpochs, numImages;
+
+
     NETWORK network = {
         new Dense(28*28, 40),
         new Softmax(),
@@ -218,15 +222,32 @@ int main(){
         new Softmax()
     };
     
-
-    
-    //runXor();
-    trainMnist(network, 3000);
-
-
-    //storeNetwork("netFile.txt", network);
-    //readNetwork("netFile.txt", network);
-    runMnist(network);
+    if(argc == 3){
+        numImages = atoi(argv[1]);
+        numEpochs = atoi(argv[2]);
+        if(numImages == 0 || numEpochs == 0){
+            std::cout << "Wrong input parameters\n";
+            return 0;
+        }else{
+            trainMnist(network, numEpochs, numImages);
+            storeNetwork("netFile.txt", network);
+        }
+    }
+    else if(argc == 2){
+        numImages = atoi(argv[1]);
+        if(numImages == 0){
+            std::cout << "Wrong input parameters\n";
+            return 0;
+        }
+        else{
+            readNetwork("netFile.txt", network);
+            runMnist(network, numImages);
+        }
+    }
+    else{
+        std::cout << "Usage: ./ml {Number of Images}, {Number of Epochs} For training \nor\n ./ml {Number of Images} for running\n";
+        return 0;
+    }
     
     return 0;
 }
