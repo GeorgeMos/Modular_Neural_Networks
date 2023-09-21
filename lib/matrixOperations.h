@@ -59,7 +59,7 @@ VECTOR2D tanh_m(VECTOR2D &matrix);
 
 VECTOR2D tanhPrime_m(VECTOR2D &matrix);
 
-int argMax(VECTOR &matrix);
+int argMax(VECTOR2D &matrix);
 
 VECTOR2D exp_m(VECTOR2D &matrix);
 

@@ -41,7 +41,7 @@ VECTOR2D trainResults =
 }
 
 
-void trainMnist(NETWORK &network, int epochs,int imageNum){
+void trainMnist(NETWORK &network, int epochs, int imageNum, double rate, bool verbose){
     VECTOR2D trainData;
     VECTOR2D trainResults;
     VECTOR2D runData;
@@ -79,7 +79,7 @@ void trainMnist(NETWORK &network, int epochs,int imageNum){
         }
         
         std::cout << "Starting training\n";
-        train(network, trainData, trainResults, 0.001, 0.01, epochs, true);
+        train(network, trainData, trainResults, 0.001, rate, epochs, verbose);
         std::cout << "Training Complete\n";
         //run(network, trainData, trainResults);
         
@@ -123,7 +123,7 @@ void runMnist(NETWORK network, int imageNum){
             runResults[i][mnistRunResults[i][0]] = 1.0;
         }
 
-        run(network, trainData, trainResults);
+        run(network, runData, runResults);
 
     }
     catch(std::invalid_argument const& ex){
@@ -213,6 +213,7 @@ void readNetwork(std::string filename, NETWORK &network){
 int main(int argc, char** argv){
     
     int numEpochs, numImages;
+    std::string fileName;
 
 
     NETWORK network = {
@@ -222,30 +223,31 @@ int main(int argc, char** argv){
         new Softmax()
     };
     
-    if(argc == 3){
+    if(argc == 4){
         numImages = atoi(argv[1]);
         numEpochs = atoi(argv[2]);
+        
         if(numImages == 0 || numEpochs == 0){
             std::cout << "Wrong input parameters\n";
             return 0;
         }else{
-            trainMnist(network, numEpochs, numImages);
-            storeNetwork("netFile.txt", network);
+            trainMnist(network, numEpochs, numImages, 0.09, true);
+            storeNetwork(argv[3], network);
         }
     }
-    else if(argc == 2){
+    else if(argc == 3){
         numImages = atoi(argv[1]);
         if(numImages == 0){
             std::cout << "Wrong input parameters\n";
             return 0;
         }
         else{
-            readNetwork("netFile.txt", network);
+            readNetwork(argv[2], network);
             runMnist(network, numImages);
         }
     }
     else{
-        std::cout << "Usage: ./ml {Number of Images}, {Number of Epochs} For training \nor\n ./ml {Number of Images} for running\n";
+        std::cout << "Usage: ./ml {Number of Images}, {Number of Epochs} {Model Output File} For training \nor\n ./ml {Number of Images} {Model Input File} for running\n";
         return 0;
     }
     

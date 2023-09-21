@@ -398,15 +398,15 @@ VECTOR2D tanhPrime_m(VECTOR2D &matrix)
     return mSub;
 }
 
-int argMax(VECTOR &matrix)
+int argMax(VECTOR2D &matrix)
 {
     int size = matrix.size();
 
     double max = 0.0;
     int maxIndex = 0;
     for(int i = 0; i < size; i++){
-        if(matrix[i] > max){
-            max = matrix[i];
+        if(matrix[i][0] > max){
+            max = matrix[i][0];
             maxIndex = i;
         }
     }

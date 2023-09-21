@@ -104,9 +104,11 @@ void run(NETWORK &network, VECTOR2D &inputData, VECTOR2D &inputResults)
        //std::cout << "Prediction: "  << argMax(transpose(output).at(0)) << " Expectation: " << argMax(transpose(r).at(0)) << "\n"; 
        
        std::cout << "Prediction: "  << "\n"; 
-        printMatrix(output); 
+        //printMatrix(output); 
+        std::cout<< argMax(output) << "\n";
         std::cout << " Expectation:\n";
-        printMatrix(r); 
+        //printMatrix(r); 
+        std::cout<< argMax(r) << "\n";
         std::cout << '\n';
     }   
 }
