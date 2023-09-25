@@ -139,8 +139,13 @@ void runMnist(NETWORK network, int imageNum){
 }
 
 void storeNetwork(std::string filename, NETWORK &network){
+    filename.push_back('.');
+    //Saving the weights
     std::ofstream file;
-    file.open(filename);
+    std::string wFile = filename;
+    wFile.push_back('w');
+    //std::cout << wFile;
+    file.open(wFile);
     int sx;
     int sy;
     for(int i = 0; i < network.size(); i++){
@@ -150,6 +155,28 @@ void storeNetwork(std::string filename, NETWORK &network){
             for(int x = 0; x < sx; x++){
                 for(int y = 0; y < sy; y++){
                     file << network[i]->weights.at(x).at(y) << " ";
+                }
+                file << "\n";
+            }
+        }
+        file << "#\n";
+    }
+    file.close();
+
+    //Saving the biases
+    std::string bFile = filename;
+    bFile.push_back('b');
+    
+    file.open(bFile);
+    //int sx;
+    //int sy;
+    for(int i = 0; i < network.size(); i++){
+        sx = network.at(i)->bias.size();
+        if(sx > 0){
+            sy = network.at(i)->bias.at(0).size();
+            for(int x = 0; x < sx; x++){
+                for(int y = 0; y < sy; y++){
+                    file << network[i]->bias.at(x).at(y) << " ";
                 }
                 file << "\n";
             }
@@ -176,7 +203,13 @@ std::vector<std::string> split(std::string s, std::string delimiter) {
 
 void readNetwork(std::string filename, NETWORK &network){
     std::ifstream file;
-    file.open(filename);
+    filename.push_back('.');
+
+    //Read Weights
+    std::string wFile = filename;
+    wFile.push_back('b');
+
+    file.open(wFile);
     int size = network.size();
     network.resize(size);
     std::string delimiter = " ";
@@ -199,6 +232,41 @@ void readNetwork(std::string filename, NETWORK &network){
                 if(line.compare("#") && lineV.size() > 1){
                     double num = std::stod(lineV.at(i));
                     network.at(n)->weights.at(x).at(i) = num;
+                }
+            }
+        }
+
+    }
+
+    file.close();
+
+    //Read bias
+    std::string bFile = filename;
+    bFile.push_back('b');
+
+    file.open(bFile);
+    //int size = network.size();
+    network.resize(size);
+    //std::string delimiter = " ";
+    //std::vector<std::string> lineV;
+    //std::string line;
+    n = 0;
+    x = 0;
+
+    while(getline(file, line)){
+        if(!line.compare("#")){
+            n++;
+            x = 0;
+        }
+        lineV = split(line, delimiter);
+        for(int i = 0; i < lineV.size(); i++){
+            if(!lineV[i].compare("")){
+                x++;
+            }
+            else{
+                if(line.compare("#") && lineV.size() > 1){
+                    double num = std::stod(lineV.at(i));
+                    network.at(n)->bias.at(x).at(i) = num;
                 }
             }
         }
@@ -236,10 +304,10 @@ int main(int argc, char** argv){
             if(batchSize != 0){
                 for(int i = 0; i < numImages/batchSize; i++){
                     std::cout << "Training batch number: " << i << "\n";
-                    trainMnist(network, numEpochs, numImages, i, batchSize, 0.02, true);
+                    trainMnist(network, numEpochs, numImages, i, batchSize, 0.07, true);
                 }
             }else{
-                trainMnist(network, numEpochs, numImages, 0, numImages, 0.02, true);
+                trainMnist(network, numEpochs, numImages, 0, numImages, 0.07, true);
             }
             storeNetwork(argv[4], network);
         }

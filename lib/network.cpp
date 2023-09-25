@@ -93,6 +93,7 @@ void run(NETWORK &network, VECTOR2D &inputData, VECTOR2D &inputResults)
         rT.resize(1);
         //r[0].resize(dataSize);
 
+        double loss = 0;
     for(int j = 0; j < dataSize; j++){
         dT[0] = inputData[j];
         rT[0] = inputResults[j];
@@ -102,6 +103,7 @@ void run(NETWORK &network, VECTOR2D &inputData, VECTOR2D &inputResults)
 
         //printMatrix(dT);
        output = predict(network, d);
+       loss += squareDiff(output, r);
        //VECTOR out = transpose(output).at(0);
        //VECTOR
        //std::cout << "Prediction: "  << argMax(transpose(output).at(0)) << " Expectation: " << argMax(transpose(r).at(0)) << "\n"; 
@@ -113,5 +115,6 @@ void run(NETWORK &network, VECTOR2D &inputData, VECTOR2D &inputResults)
         //printMatrix(r); 
         std::cout<< argMax(r) << "\n";
         std::cout << '\n';
-    }   
+    }
+    std::cout << "Loss: " << loss << "\n";
 }
