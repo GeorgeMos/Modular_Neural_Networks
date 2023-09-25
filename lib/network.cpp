@@ -23,6 +23,7 @@ void train(NETWORK &network, VECTOR2D &inputData, VECTOR2D &inputResults, double
 {
     int dataSize = inputData.size();
     int netSize = network.size();
+    VECTOR shuffleMap;
     time_t timeS;
     for(int i = 0; i < cycles; i++){
         timeS = time(&timeS);
@@ -30,6 +31,8 @@ void train(NETWORK &network, VECTOR2D &inputData, VECTOR2D &inputResults, double
         VECTOR2D output;
 
         for(int j = 0; j < dataSize; j++){
+            shuffleMap = randIntMatrix(dataSize, dataSize);
+
             VECTOR2D d, r, dT, rT;
             VECTOR2D grad;
 
@@ -41,8 +44,8 @@ void train(NETWORK &network, VECTOR2D &inputData, VECTOR2D &inputResults, double
             rT.resize(1);
             r[0].resize(dataSize);
             //if(verbose){std::cout << "Data Index: " << j << "\n";}
-            dT[0] = inputData[j];
-            rT[0] = inputResults[j];
+            dT[0] = inputData[(int)shuffleMap[j]];
+            rT[0] = inputResults[(int)shuffleMap[j]];
 
             d = transpose(dT);
             r = transpose(rT);

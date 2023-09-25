@@ -7,7 +7,7 @@
 #include <string>
 #include <thread>
 #include <omp.h>
-
+#include <algorithm>
 
 typedef std::vector<std::vector<double>> VECTOR2D;
 typedef std::vector<double> VECTOR;
@@ -38,6 +38,10 @@ VECTOR2D transpose(VECTOR2D &matrix);
 void printMatrix(VECTOR2D matrix);
 
 VECTOR2D randMatrix(int sizeX, int sizeY);
+
+VECTOR randIntMatrix(int size, int range);
+
+VECTOR2D randGausianMatrix(int sizeX, int sizeY);
 
 VECTOR2D multiply(VECTOR2D &matrix, double num);
 

@@ -41,7 +41,7 @@ VECTOR2D trainResults =
 }
 
 
-void trainMnist(NETWORK &network, int epochs, int imageNum, double rate, bool verbose){
+void trainMnist(NETWORK &network, int epochs, int imageNum, int batchNum, int batchSize, double rate, bool verbose){
     VECTOR2D trainData;
     VECTOR2D trainResults;
     VECTOR2D runData;
@@ -61,14 +61,19 @@ void trainMnist(NETWORK &network, int epochs, int imageNum, double rate, bool ve
 
         std::cout << "Data Loading Complete!\n";
         
-        
-        trainData = mnistTrainData;
-        trainResults.resize(mnistTrainResults.size());
-        for(int i = 0; i < trainResults.size(); i++){
-            trainResults[i].resize(10, 0.0);
-            trainResults[i][mnistTrainResults[i][0]] = 1.0;
+        trainData.resize(batchSize);
+        for(int j = 0; j < batchSize; j++){
+            trainData[j] = mnistTrainData[j + batchNum*batchSize];
         }
 
+        trainResults.resize(batchSize);
+        for(int i = 0; i < batchSize; i++){
+            trainResults[i].resize(10, 0.0);
+            trainResults[i][mnistTrainResults[i + batchNum*batchSize][0]] = 1.0;
+        }
+
+
+        
         
 
         runData = mnistRunData;
@@ -123,7 +128,8 @@ void runMnist(NETWORK network, int imageNum){
             runResults[i][mnistRunResults[i][0]] = 1.0;
         }
 
-        run(network, runData, runResults);
+        //run(network, runData, runResults);
+        run(network, trainData, trainResults);
 
     }
     catch(std::invalid_argument const& ex){
@@ -138,7 +144,6 @@ void storeNetwork(std::string filename, NETWORK &network){
     int sx;
     int sy;
     for(int i = 0; i < network.size(); i++){
-        //TODO:Write the weights to a csv format
         sx = network.at(i)->weights.size();
         if(sx > 0){
             sy = network.at(i)->weights.at(0).size();
@@ -177,29 +182,23 @@ void readNetwork(std::string filename, NETWORK &network){
     std::string delimiter = " ";
     std::vector<std::string> lineV;
     std::string line;
-    //std::getline(file, line);
     int n = 0;
     int x = 0;
 
     while(getline(file, line)){
         if(!line.compare("#")){
-            //std::cout << "Layer: " << n << "\n";
             n++;
             x = 0;
         }
         lineV = split(line, delimiter);
-        //std::cout << "Size: " << lineV.size() << "\n";
         for(int i = 0; i < lineV.size(); i++){
             if(!lineV[i].compare("")){
-                //std::cout << "x: " << x << "\n";
                 x++;
             }
             else{
                 if(line.compare("#") && lineV.size() > 1){
-                    //std::cout << lineV[i] << "-";
                     double num = std::stod(lineV.at(i));
                     network.at(n)->weights.at(x).at(i) = num;
-                    //std::cout << network[0]->weights[x][i] << "\n";
                 }
             }
         }
@@ -222,8 +221,10 @@ int main(int argc, char** argv){
         new Dense(40, 10),
         new Softmax()
     };
+
+    int batchSize;
     
-    if(argc == 4){
+    if(argc == 5){
         numImages = atoi(argv[1]);
         numEpochs = atoi(argv[2]);
         
@@ -231,8 +232,16 @@ int main(int argc, char** argv){
             std::cout << "Wrong input parameters\n";
             return 0;
         }else{
-            trainMnist(network, numEpochs, numImages, 0.09, true);
-            storeNetwork(argv[3], network);
+            batchSize = atoi(argv[3]);
+            if(batchSize != 0){
+                for(int i = 0; i < numImages/batchSize; i++){
+                    std::cout << "Training batch number: " << i << "\n";
+                    trainMnist(network, numEpochs, numImages, i, batchSize, 0.02, true);
+                }
+            }else{
+                trainMnist(network, numEpochs, numImages, 0, numImages, 0.02, true);
+            }
+            storeNetwork(argv[4], network);
         }
     }
     else if(argc == 3){
@@ -247,7 +256,7 @@ int main(int argc, char** argv){
         }
     }
     else{
-        std::cout << "Usage: ./ml {Number of Images}, {Number of Epochs} {Model Output File} For training \nor\n ./ml {Number of Images} {Model Input File} for running\n";
+        std::cout << "Usage: ./ml {Number of Images}, {Number of Epochs}, {batch size (0=no batch)}, {Model Output File} For training \nor\n ./ml {Number of Images} {Model Input File} for running\n";
         return 0;
     }
     

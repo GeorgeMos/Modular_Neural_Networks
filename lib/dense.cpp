@@ -2,8 +2,10 @@
 
 Dense::Dense(int inputSize, int outputSize)
 {
-    this->weights = randMatrix(outputSize, inputSize);
-    this->bias = randMatrix(outputSize, 1);
+    //this->weights = randMatrix(outputSize, inputSize);
+    //this->bias = randMatrix(outputSize, 1);
+    this->weights = randGausianMatrix(outputSize, inputSize);
+    this->bias = randGausianMatrix(outputSize, 1);
 }
 
 VECTOR2D Dense::forward(VECTOR2D &input)

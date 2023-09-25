@@ -37,6 +37,7 @@ VECTOR2D dot(VECTOR2D &a, VECTOR2D &b)
                     //std::cout << omp_get_thread_num() << "\n";
                     rez += a[ax][y] * bT[xb][y];
                 }
+           
                 outMatrix[ax][xb] = rez;
                 rez = 0; 
             }
@@ -121,6 +122,43 @@ VECTOR2D randMatrix(int sizeX, int sizeY)
     for(int x = 0; x < sizeX; x++){
         for(int y = 0; y < sizeY; y++){
             outputMatrix[x][y] = (double)(rand() / static_cast<float>(RAND_MAX));
+        }
+    }
+    return outputMatrix;
+}
+
+VECTOR randIntMatrix(int size, int range)
+{
+    VECTOR outputMatrix;
+
+    //Resizing
+    outputMatrix.resize(size);
+
+    srand(time(NULL));
+    for(int x = 0; x < size; x++){
+        outputMatrix[x] = x;
+    }
+    std::random_shuffle(outputMatrix.begin(), outputMatrix.end());
+    return outputMatrix;
+}
+
+VECTOR2D randGausianMatrix(int sizeX, int sizeY)
+{
+    std::random_device device_random_;
+    std::default_random_engine generator_(device_random_());
+    std::normal_distribution<> distribution_x_(1.0, 0.5);
+
+
+    VECTOR2D outputMatrix;
+
+    //Resizing
+    outputMatrix.resize(sizeX);
+    for(int i = 0; i < sizeX; i++){
+        outputMatrix[i].resize(sizeY);
+    }
+    for(int x = 0; x < sizeX; x++){
+        for(int y = 0; y < sizeY; y++){
+            outputMatrix[x][y] = distribution_x_(generator_);
         }
     }
     return outputMatrix;
