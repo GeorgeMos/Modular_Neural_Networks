@@ -1,4 +1,4 @@
-#include "layer.h"
+#include "../include/layer.h"
 
 
 VECTOR2D Layer::forward(VECTOR2D &input)

@@ -1,4 +1,4 @@
-#include "cost.h"
+#include "../include/cost.h"
 
 double squareDiff(VECTOR2D &prediction, VECTOR2D &expectation)
 {

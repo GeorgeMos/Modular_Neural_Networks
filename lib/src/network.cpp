@@ -1,4 +1,4 @@
-#include "network.h"
+#include "../include/network.h"
 
 
 VECTOR2D predict(NETWORK &network, VECTOR2D &input)
@@ -44,8 +44,8 @@ void train(NETWORK &network, VECTOR2D &inputData, VECTOR2D &inputResults, double
             rT.resize(1);
             r[0].resize(dataSize);
             //if(verbose){std::cout << "Data Index: " << j << "\n";}
-            dT[0] = inputData[(int)shuffleMap[j]];
-            rT[0] = inputResults[(int)shuffleMap[j]];
+            dT[0] = inputData[j];
+            rT[0] = inputResults[j];
 
             d = transpose(dT);
             r = transpose(rT);

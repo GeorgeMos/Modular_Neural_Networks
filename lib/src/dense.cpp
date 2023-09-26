@@ -1,4 +1,4 @@
-#include "dense.h"
+#include "../include/dense.h"
 
 Dense::Dense(int inputSize, int outputSize)
 {

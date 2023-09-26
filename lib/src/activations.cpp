@@ -1,4 +1,4 @@
-#include "activations.h"
+#include "../include/activations.h"
 
 VECTOR2D Tanh::forward(VECTOR2D &input)
 {

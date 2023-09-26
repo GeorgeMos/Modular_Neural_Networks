@@ -1,4 +1,4 @@
-#include "matrixOperations.h"
+#include "../include/matrixOperations.h"
 
 /**
  * @brief Returns the dot product of the 2 input matrices

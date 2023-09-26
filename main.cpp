@@ -2,11 +2,11 @@
 #include<string>
 #include <vector>
 
-#include "lib/matrixOperations.h"
-#include "lib/network.h"
-#include "lib/dense.h"
-#include "lib/activations.h"
-#include "lib/mnist.h"
+#include "lib/include/matrixOperations.h"
+#include "lib/include/network.h"
+#include "lib/include/dense.h"
+#include "lib/include/activations.h"
+#include "lib/include/mnist.h"
 
 
 
@@ -207,8 +207,7 @@ void readNetwork(std::string filename, NETWORK &network){
 
     //Read Weights
     std::string wFile = filename;
-    wFile.push_back('b');
-
+    wFile.push_back('w');
     file.open(wFile);
     int size = network.size();
     network.resize(size);
@@ -240,11 +239,13 @@ void readNetwork(std::string filename, NETWORK &network){
 
     file.close();
 
+    std::ifstream file1;
     //Read bias
     std::string bFile = filename;
     bFile.push_back('b');
+    line = "";
 
-    file.open(bFile);
+    file1.open(bFile);
     //int size = network.size();
     network.resize(size);
     //std::string delimiter = " ";
@@ -253,7 +254,7 @@ void readNetwork(std::string filename, NETWORK &network){
     n = 0;
     x = 0;
 
-    while(getline(file, line)){
+    while(getline(file1, line)){
         if(!line.compare("#")){
             n++;
             x = 0;
@@ -304,10 +305,10 @@ int main(int argc, char** argv){
             if(batchSize != 0){
                 for(int i = 0; i < numImages/batchSize; i++){
                     std::cout << "Training batch number: " << i << "\n";
-                    trainMnist(network, numEpochs, numImages, i, batchSize, 0.07, true);
+                    trainMnist(network, numEpochs, numImages, i, batchSize, 0.1, true);
                 }
             }else{
-                trainMnist(network, numEpochs, numImages, 0, numImages, 0.07, true);
+                trainMnist(network, numEpochs, numImages, 0, numImages, 0.1, true);
             }
             storeNetwork(argv[4], network);
         }

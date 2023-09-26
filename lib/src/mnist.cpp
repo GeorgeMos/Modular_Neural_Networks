@@ -1,4 +1,4 @@
-#include "mnist.h"
+#include "../include/mnist.h"
 
 //This is some shit code i found online and fixed...
 
