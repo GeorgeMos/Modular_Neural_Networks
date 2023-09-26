@@ -1,3 +1,3 @@
-/home/george/Desktop/Modular_Neural_Networks (copy)/build/CMakeFiles/ml.dir
-/home/george/Desktop/Modular_Neural_Networks (copy)/build/CMakeFiles/edit_cache.dir
-/home/george/Desktop/Modular_Neural_Networks (copy)/build/CMakeFiles/rebuild_cache.dir
+/home/george/Desktop/Modular_Neural_Networks/build/CMakeFiles/ml.dir
+/home/george/Desktop/Modular_Neural_Networks/build/CMakeFiles/edit_cache.dir
+/home/george/Desktop/Modular_Neural_Networks/build/CMakeFiles/rebuild_cache.dir

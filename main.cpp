@@ -8,39 +8,6 @@
 #include "lib/include/activations.h"
 #include "lib/include/mnist.h"
 
-
-
-void runXor(){
-    VECTOR2D trainData = 
-{
-    {0, 0},
-    {0, 1},
-    {1, 0},
-    {1, 1}
-};
-
-VECTOR2D trainResults = 
-{
-    {0},
-    {1},
-    {1},
-    {0}
-};
-    NETWORK network = {
-        new Dense(2, 3),
-        new Softmax(),
-        new Dense(3, 1),
-        new Softmax()
-    };
-
-    std::cout << "Starting training\n";
-    train(network, trainData, trainResults, 0.001, 0.01, 1000, true);
-    std::cout << "Training Complete\n";
-    run(network, trainData, trainResults);
-    
-}
-
-
 void trainMnist(NETWORK &network, int epochs, int imageNum, int batchNum, int batchSize, double rate, bool verbose){
     VECTOR2D trainData;
     VECTOR2D trainResults;

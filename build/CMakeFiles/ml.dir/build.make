@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/george/Desktop/Modular_Neural_Networks (copy)"
+CMAKE_SOURCE_DIR = /home/george/Desktop/Modular_Neural_Networks
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/george/Desktop/Modular_Neural_Networks (copy)/build"
+CMAKE_BINARY_DIR = /home/george/Desktop/Modular_Neural_Networks/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ml.dir/depend.make
@@ -72,114 +72,114 @@ include CMakeFiles/ml.dir/flags.make
 CMakeFiles/ml.dir/main.cpp.o: CMakeFiles/ml.dir/flags.make
 CMakeFiles/ml.dir/main.cpp.o: ../main.cpp
 CMakeFiles/ml.dir/main.cpp.o: CMakeFiles/ml.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/george/Desktop/Modular_Neural_Networks (copy)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ml.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/main.cpp.o -MF CMakeFiles/ml.dir/main.cpp.o.d -o CMakeFiles/ml.dir/main.cpp.o -c "/home/george/Desktop/Modular_Neural_Networks (copy)/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/george/Desktop/Modular_Neural_Networks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ml.dir/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/main.cpp.o -MF CMakeFiles/ml.dir/main.cpp.o.d -o CMakeFiles/ml.dir/main.cpp.o -c /home/george/Desktop/Modular_Neural_Networks/main.cpp
 
 CMakeFiles/ml.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ml.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/george/Desktop/Modular_Neural_Networks (copy)/main.cpp" > CMakeFiles/ml.dir/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/george/Desktop/Modular_Neural_Networks/main.cpp > CMakeFiles/ml.dir/main.cpp.i
 
 CMakeFiles/ml.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ml.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/george/Desktop/Modular_Neural_Networks (copy)/main.cpp" -o CMakeFiles/ml.dir/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/george/Desktop/Modular_Neural_Networks/main.cpp -o CMakeFiles/ml.dir/main.cpp.s
 
 CMakeFiles/ml.dir/lib/src/activations.cpp.o: CMakeFiles/ml.dir/flags.make
 CMakeFiles/ml.dir/lib/src/activations.cpp.o: ../lib/src/activations.cpp
 CMakeFiles/ml.dir/lib/src/activations.cpp.o: CMakeFiles/ml.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/george/Desktop/Modular_Neural_Networks (copy)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ml.dir/lib/src/activations.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/lib/src/activations.cpp.o -MF CMakeFiles/ml.dir/lib/src/activations.cpp.o.d -o CMakeFiles/ml.dir/lib/src/activations.cpp.o -c "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/activations.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/george/Desktop/Modular_Neural_Networks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ml.dir/lib/src/activations.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/lib/src/activations.cpp.o -MF CMakeFiles/ml.dir/lib/src/activations.cpp.o.d -o CMakeFiles/ml.dir/lib/src/activations.cpp.o -c /home/george/Desktop/Modular_Neural_Networks/lib/src/activations.cpp
 
 CMakeFiles/ml.dir/lib/src/activations.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ml.dir/lib/src/activations.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/activations.cpp" > CMakeFiles/ml.dir/lib/src/activations.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/george/Desktop/Modular_Neural_Networks/lib/src/activations.cpp > CMakeFiles/ml.dir/lib/src/activations.cpp.i
 
 CMakeFiles/ml.dir/lib/src/activations.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ml.dir/lib/src/activations.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/activations.cpp" -o CMakeFiles/ml.dir/lib/src/activations.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/george/Desktop/Modular_Neural_Networks/lib/src/activations.cpp -o CMakeFiles/ml.dir/lib/src/activations.cpp.s
 
 CMakeFiles/ml.dir/lib/src/cost.cpp.o: CMakeFiles/ml.dir/flags.make
 CMakeFiles/ml.dir/lib/src/cost.cpp.o: ../lib/src/cost.cpp
 CMakeFiles/ml.dir/lib/src/cost.cpp.o: CMakeFiles/ml.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/george/Desktop/Modular_Neural_Networks (copy)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ml.dir/lib/src/cost.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/lib/src/cost.cpp.o -MF CMakeFiles/ml.dir/lib/src/cost.cpp.o.d -o CMakeFiles/ml.dir/lib/src/cost.cpp.o -c "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/cost.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/george/Desktop/Modular_Neural_Networks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ml.dir/lib/src/cost.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/lib/src/cost.cpp.o -MF CMakeFiles/ml.dir/lib/src/cost.cpp.o.d -o CMakeFiles/ml.dir/lib/src/cost.cpp.o -c /home/george/Desktop/Modular_Neural_Networks/lib/src/cost.cpp
 
 CMakeFiles/ml.dir/lib/src/cost.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ml.dir/lib/src/cost.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/cost.cpp" > CMakeFiles/ml.dir/lib/src/cost.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/george/Desktop/Modular_Neural_Networks/lib/src/cost.cpp > CMakeFiles/ml.dir/lib/src/cost.cpp.i
 
 CMakeFiles/ml.dir/lib/src/cost.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ml.dir/lib/src/cost.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/cost.cpp" -o CMakeFiles/ml.dir/lib/src/cost.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/george/Desktop/Modular_Neural_Networks/lib/src/cost.cpp -o CMakeFiles/ml.dir/lib/src/cost.cpp.s
 
 CMakeFiles/ml.dir/lib/src/dense.cpp.o: CMakeFiles/ml.dir/flags.make
 CMakeFiles/ml.dir/lib/src/dense.cpp.o: ../lib/src/dense.cpp
 CMakeFiles/ml.dir/lib/src/dense.cpp.o: CMakeFiles/ml.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/george/Desktop/Modular_Neural_Networks (copy)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ml.dir/lib/src/dense.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/lib/src/dense.cpp.o -MF CMakeFiles/ml.dir/lib/src/dense.cpp.o.d -o CMakeFiles/ml.dir/lib/src/dense.cpp.o -c "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/dense.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/george/Desktop/Modular_Neural_Networks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ml.dir/lib/src/dense.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/lib/src/dense.cpp.o -MF CMakeFiles/ml.dir/lib/src/dense.cpp.o.d -o CMakeFiles/ml.dir/lib/src/dense.cpp.o -c /home/george/Desktop/Modular_Neural_Networks/lib/src/dense.cpp
 
 CMakeFiles/ml.dir/lib/src/dense.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ml.dir/lib/src/dense.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/dense.cpp" > CMakeFiles/ml.dir/lib/src/dense.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/george/Desktop/Modular_Neural_Networks/lib/src/dense.cpp > CMakeFiles/ml.dir/lib/src/dense.cpp.i
 
 CMakeFiles/ml.dir/lib/src/dense.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ml.dir/lib/src/dense.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/dense.cpp" -o CMakeFiles/ml.dir/lib/src/dense.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/george/Desktop/Modular_Neural_Networks/lib/src/dense.cpp -o CMakeFiles/ml.dir/lib/src/dense.cpp.s
 
 CMakeFiles/ml.dir/lib/src/layer.cpp.o: CMakeFiles/ml.dir/flags.make
 CMakeFiles/ml.dir/lib/src/layer.cpp.o: ../lib/src/layer.cpp
 CMakeFiles/ml.dir/lib/src/layer.cpp.o: CMakeFiles/ml.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/george/Desktop/Modular_Neural_Networks (copy)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ml.dir/lib/src/layer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/lib/src/layer.cpp.o -MF CMakeFiles/ml.dir/lib/src/layer.cpp.o.d -o CMakeFiles/ml.dir/lib/src/layer.cpp.o -c "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/layer.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/george/Desktop/Modular_Neural_Networks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ml.dir/lib/src/layer.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/lib/src/layer.cpp.o -MF CMakeFiles/ml.dir/lib/src/layer.cpp.o.d -o CMakeFiles/ml.dir/lib/src/layer.cpp.o -c /home/george/Desktop/Modular_Neural_Networks/lib/src/layer.cpp
 
 CMakeFiles/ml.dir/lib/src/layer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ml.dir/lib/src/layer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/layer.cpp" > CMakeFiles/ml.dir/lib/src/layer.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/george/Desktop/Modular_Neural_Networks/lib/src/layer.cpp > CMakeFiles/ml.dir/lib/src/layer.cpp.i
 
 CMakeFiles/ml.dir/lib/src/layer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ml.dir/lib/src/layer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/layer.cpp" -o CMakeFiles/ml.dir/lib/src/layer.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/george/Desktop/Modular_Neural_Networks/lib/src/layer.cpp -o CMakeFiles/ml.dir/lib/src/layer.cpp.s
 
 CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.o: CMakeFiles/ml.dir/flags.make
 CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.o: ../lib/src/matrixOperations.cpp
 CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.o: CMakeFiles/ml.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/george/Desktop/Modular_Neural_Networks (copy)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.o -MF CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.o.d -o CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.o -c "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/matrixOperations.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/george/Desktop/Modular_Neural_Networks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.o -MF CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.o.d -o CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.o -c /home/george/Desktop/Modular_Neural_Networks/lib/src/matrixOperations.cpp
 
 CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/matrixOperations.cpp" > CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/george/Desktop/Modular_Neural_Networks/lib/src/matrixOperations.cpp > CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.i
 
 CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/matrixOperations.cpp" -o CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/george/Desktop/Modular_Neural_Networks/lib/src/matrixOperations.cpp -o CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.s
 
 CMakeFiles/ml.dir/lib/src/mnist.cpp.o: CMakeFiles/ml.dir/flags.make
 CMakeFiles/ml.dir/lib/src/mnist.cpp.o: ../lib/src/mnist.cpp
 CMakeFiles/ml.dir/lib/src/mnist.cpp.o: CMakeFiles/ml.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/george/Desktop/Modular_Neural_Networks (copy)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ml.dir/lib/src/mnist.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/lib/src/mnist.cpp.o -MF CMakeFiles/ml.dir/lib/src/mnist.cpp.o.d -o CMakeFiles/ml.dir/lib/src/mnist.cpp.o -c "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/mnist.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/george/Desktop/Modular_Neural_Networks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ml.dir/lib/src/mnist.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/lib/src/mnist.cpp.o -MF CMakeFiles/ml.dir/lib/src/mnist.cpp.o.d -o CMakeFiles/ml.dir/lib/src/mnist.cpp.o -c /home/george/Desktop/Modular_Neural_Networks/lib/src/mnist.cpp
 
 CMakeFiles/ml.dir/lib/src/mnist.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ml.dir/lib/src/mnist.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/mnist.cpp" > CMakeFiles/ml.dir/lib/src/mnist.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/george/Desktop/Modular_Neural_Networks/lib/src/mnist.cpp > CMakeFiles/ml.dir/lib/src/mnist.cpp.i
 
 CMakeFiles/ml.dir/lib/src/mnist.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ml.dir/lib/src/mnist.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/mnist.cpp" -o CMakeFiles/ml.dir/lib/src/mnist.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/george/Desktop/Modular_Neural_Networks/lib/src/mnist.cpp -o CMakeFiles/ml.dir/lib/src/mnist.cpp.s
 
 CMakeFiles/ml.dir/lib/src/network.cpp.o: CMakeFiles/ml.dir/flags.make
 CMakeFiles/ml.dir/lib/src/network.cpp.o: ../lib/src/network.cpp
 CMakeFiles/ml.dir/lib/src/network.cpp.o: CMakeFiles/ml.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/george/Desktop/Modular_Neural_Networks (copy)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ml.dir/lib/src/network.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/lib/src/network.cpp.o -MF CMakeFiles/ml.dir/lib/src/network.cpp.o.d -o CMakeFiles/ml.dir/lib/src/network.cpp.o -c "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/network.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/george/Desktop/Modular_Neural_Networks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ml.dir/lib/src/network.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ml.dir/lib/src/network.cpp.o -MF CMakeFiles/ml.dir/lib/src/network.cpp.o.d -o CMakeFiles/ml.dir/lib/src/network.cpp.o -c /home/george/Desktop/Modular_Neural_Networks/lib/src/network.cpp
 
 CMakeFiles/ml.dir/lib/src/network.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ml.dir/lib/src/network.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/network.cpp" > CMakeFiles/ml.dir/lib/src/network.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/george/Desktop/Modular_Neural_Networks/lib/src/network.cpp > CMakeFiles/ml.dir/lib/src/network.cpp.i
 
 CMakeFiles/ml.dir/lib/src/network.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ml.dir/lib/src/network.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/george/Desktop/Modular_Neural_Networks (copy)/lib/src/network.cpp" -o CMakeFiles/ml.dir/lib/src/network.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/george/Desktop/Modular_Neural_Networks/lib/src/network.cpp -o CMakeFiles/ml.dir/lib/src/network.cpp.s
 
 # Object files for target ml
 ml_OBJECTS = \
@@ -207,7 +207,7 @@ ml: CMakeFiles/ml.dir/build.make
 ml: /usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so
 ml: /usr/lib/x86_64-linux-gnu/libpthread.a
 ml: CMakeFiles/ml.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/george/Desktop/Modular_Neural_Networks (copy)/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ml"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/george/Desktop/Modular_Neural_Networks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ml"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ml.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -219,6 +219,6 @@ CMakeFiles/ml.dir/clean:
 .PHONY : CMakeFiles/ml.dir/clean
 
 CMakeFiles/ml.dir/depend:
-	cd "/home/george/Desktop/Modular_Neural_Networks (copy)/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/george/Desktop/Modular_Neural_Networks (copy)" "/home/george/Desktop/Modular_Neural_Networks (copy)" "/home/george/Desktop/Modular_Neural_Networks (copy)/build" "/home/george/Desktop/Modular_Neural_Networks (copy)/build" "/home/george/Desktop/Modular_Neural_Networks (copy)/build/CMakeFiles/ml.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/george/Desktop/Modular_Neural_Networks/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/george/Desktop/Modular_Neural_Networks /home/george/Desktop/Modular_Neural_Networks /home/george/Desktop/Modular_Neural_Networks/build /home/george/Desktop/Modular_Neural_Networks/build /home/george/Desktop/Modular_Neural_Networks/build/CMakeFiles/ml.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ml.dir/depend
 
