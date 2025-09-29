@@ -269,7 +269,6 @@ CMakeFiles/ml.dir/lib/src/activations.cpp.o: /Users/georgemoschonas/Documents/Pr
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/math.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdint.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdio.h \
-  /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/omp.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdarg.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stddef.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdint.h
@@ -541,7 +540,6 @@ CMakeFiles/ml.dir/lib/src/cost.cpp.o: /Users/georgemoschonas/Documents/Projects/
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/math.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdint.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdio.h \
-  /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/omp.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdarg.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stddef.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdint.h
@@ -814,7 +812,6 @@ CMakeFiles/ml.dir/lib/src/dense.cpp.o: /Users/georgemoschonas/Documents/Projects
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/math.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdint.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdio.h \
-  /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/omp.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdarg.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stddef.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdint.h
@@ -1086,7 +1083,6 @@ CMakeFiles/ml.dir/lib/src/layer.cpp.o: /Users/georgemoschonas/Documents/Projects
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/math.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdint.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdio.h \
-  /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/omp.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdarg.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stddef.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdint.h
@@ -1357,7 +1353,6 @@ CMakeFiles/ml.dir/lib/src/matrixOperations.cpp.o: /Users/georgemoschonas/Documen
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/math.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdint.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdio.h \
-  /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/omp.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdarg.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stddef.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdint.h
@@ -1634,7 +1629,6 @@ CMakeFiles/ml.dir/lib/src/mnist.cpp.o: /Users/georgemoschonas/Documents/Projects
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/math.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdint.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdio.h \
-  /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/omp.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdarg.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stddef.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdint.h
@@ -1909,7 +1903,6 @@ CMakeFiles/ml.dir/lib/src/network.cpp.o: /Users/georgemoschonas/Documents/Projec
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/math.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdint.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdio.h \
-  /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/omp.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdarg.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stddef.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdint.h
@@ -2191,7 +2184,6 @@ CMakeFiles/ml.dir/main.cpp.o: /Users/georgemoschonas/Documents/Projects/Modular_
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/math.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdint.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdio.h \
-  /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/omp.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdarg.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stddef.h \
   /opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/stdint.h
@@ -2298,8 +2290,6 @@ CMakeFiles/ml.dir/main.cpp.o: /Users/georgemoschonas/Documents/Projects/Modular_
 /opt/homebrew/Cellar/gcc@13/13.4.0/include/c++/13/bits/vector.tcc:
 
 /opt/homebrew/Cellar/gcc@13/13.4.0/include/c++/13/bits/utility.h:
-
-/opt/homebrew/Cellar/gcc@13/13.4.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include/omp.h:
 
 /opt/homebrew/Cellar/gcc@13/13.4.0/include/c++/13/bits/this_thread_sleep.h:
 
