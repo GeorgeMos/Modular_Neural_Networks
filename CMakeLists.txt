@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.6)
  
 #Option for MacOs
+if(APPLE)
 set(CMAKE_CXX_COMPILER "g++-13")
+endif()
 
 project(ml LANGUAGES CXX)
 
