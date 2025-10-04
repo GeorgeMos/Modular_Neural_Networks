@@ -71,7 +71,10 @@ void train(NETWORK &network, VECTOR2D &inputData, VECTOR2D &inputResults, double
         time_t timeE = time(&timeE);
         if(verbose){
             std::cout << "Epoch: " << i << "/" << cycles << " Error: " << loss 
-            << " Data Size: " << dataSize << " Threads: " << omp_get_num_procs() 
+            << " Data Size: " << dataSize 
+            #ifdef USE_OPENMP
+            << " Threads: " << omp_get_num_procs() 
+            #endif
             << " Time(s): " << (timeE - timeS) << '\n';
         }
     }

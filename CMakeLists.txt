@@ -1,11 +1,16 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.6)
  
+#Option for MacOs
+set(CMAKE_CXX_COMPILER "g++-13")
+
 project(ml LANGUAGES CXX)
 
 
 
 file(GLOB_RECURSE LIBS_INCLUDE lib/include/*.h)
 file(GLOB_RECURSE LIBS_SRC lib/src/*.cpp)
+
+file(COPY ${CMAKE_SOURCE_DIR}/datasets/ DESTINATION ${CMAKE_BINARY_DIR}/datasets/)
 
 find_package(OpenMP)
 

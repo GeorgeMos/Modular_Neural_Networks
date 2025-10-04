@@ -28,7 +28,9 @@ VECTOR2D dot(VECTOR2D &a, VECTOR2D &b)
 
         double rez = 0;
         //Itterate x for a
+        #ifdef USE_OPENMP
         #pragma omp parallel for collapse(2) private(rez)
+        #endif
         for(int ax = 0; ax < sizeaX; ax++){
             //Itterate x for b
             for(int xb = 0; xb < sizebY; xb++){
@@ -73,7 +75,9 @@ VECTOR2D transpose(VECTOR2D &matrix)
     }
 
     //Transposing
+    #ifdef USE_OPENMP
     #pragma omp parallel for
+    #endif
     for(int x = 0; x<sizeX; x++){
         for(int y = 0; y < sizeY; y++){
             outMatrix[y][x] = matrix[x][y];
@@ -184,7 +188,9 @@ VECTOR2D multiply(VECTOR2D &matrix, double num)
         outputMatrix[i].resize(sizeY);
     }
 
+    #ifdef USE_OPENMP
     #pragma omp parallel for collapse(2)
+    #endif
     for(int x = 0; x < sizeX; x++){
         for(int y = 0; y < sizeY; y++){
             outputMatrix[x][y] = matrix[x][y]*num;
@@ -207,7 +213,9 @@ VECTOR2D multiply(VECTOR2D &a, VECTOR2D &b)
             outputMatrix[i].resize(sizeY);
         }
 
+        #ifdef USE_OPENMP
         #pragma omp parallel for collapse(2)
+        #endif
         for(int x = 0; x < sizeX; x++){
             for(int y = 0; y < sizeY; y++){
                 outputMatrix[x][y] = a[x][y] * b[x][y];
@@ -246,7 +254,9 @@ VECTOR2D subtract(VECTOR2D &a, VECTOR2D &b)
             outputMatrix[i].resize(sizeY);
         }
 
+        #ifdef USE_OPENMP
         #pragma omp parallel for collapse(2)
+        #endif
         for(int x = 0; x < sizeX; x++){
             for(int y = 0; y < sizeY; y++){
                 outputMatrix[x][y] = a[x][y] - b[x][y];
@@ -276,7 +286,9 @@ VECTOR2D subtract(float a, VECTOR2D &b)
         outputMatrix[i].resize(sizeY);
     }
 
+    #ifdef USE_OPENMP
     #pragma omp parallel for collapse(2)
+    #endif
     for(int x = 0; x < sizeX; x++){
         for(int y = 0; y < sizeY; y++){
             outputMatrix[x][y] = a - b[x][y];
@@ -306,7 +318,9 @@ VECTOR2D add(VECTOR2D &a, VECTOR2D &b)
             outputMatrix[i].resize(sizeY);
         }
 
+        #ifdef USE_OPENMP
         #pragma omp parallel for collapse(2)
+        #endif
         for(int x = 0; x < sizeX; x++){
             for(int y = 0; y < sizeY; y++){
                 outputMatrix[x][y] = a[x][y] + b[x][y];
@@ -342,7 +356,10 @@ VECTOR2D power(VECTOR2D &matrix, double pow)
     for(int i = 0; i < sizeX; i++){
         outputMatrix[i].resize(sizeY);
     }
+    #ifdef USE_OPENMP
     #pragma omp parallel for collapse(2)
+    #endif
+
     for(int x = 0; x < sizeX; x++){
         for(int y = 0; y < sizeY; y++){
             //std::cout << omp_get_thread_num() << "\n";
@@ -397,7 +414,10 @@ VECTOR2D divide(VECTOR2D &matrix, double num)
         outputMatrix[i].resize(sizeY);
     }
 
+    #ifdef USE_OPENMP
     #pragma omp parallel for collapse(2)
+    #endif
+
     for(int x = 0; x < sizeX; x++){
         for(int y = 0; y < sizeY; y++){
             outputMatrix[x][y] = matrix[x][y]/num;
@@ -464,7 +484,9 @@ VECTOR2D exp_m(VECTOR2D &matrix)
         outputMatrix[i].resize(sizeY);
     }
 
+    #ifdef USE_OPENMP
     #pragma omp parallel for collapse(2)
+    #endif
     for(int x = 0; x < sizeX; x++){
         for(int y = 0; y < sizeY; y++){
             outputMatrix[x][y] = std::exp(matrix[x][y]);

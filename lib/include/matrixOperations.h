@@ -6,7 +6,12 @@
 #include <cmath>
 #include <string>
 #include <thread>
+
+//#define USE_OPENMP
+
+#ifdef USE_OPENMP
 #include <omp.h>
+#endif
 #include <algorithm>
 
 typedef std::vector<std::vector<double>> VECTOR2D;

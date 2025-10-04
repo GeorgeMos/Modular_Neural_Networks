@@ -95,8 +95,8 @@ void runMnist(NETWORK network, int imageNum){
             runResults[i][mnistRunResults[i][0]] = 1.0;
         }
 
-        //run(network, runData, runResults);
-        run(network, trainData, trainResults);
+        run(network, runData, runResults);
+        //run(network, trainData, trainResults);
 
     }
     catch(std::invalid_argument const& ex){
@@ -252,7 +252,9 @@ int main(int argc, char** argv){
 
 
     NETWORK network = {
-        new Dense(28*28, 40),
+        new Dense(28*28, 200),
+        new Softmax(),
+        new Dense(200, 40),
         new Softmax(),
         new Dense(40, 10),
         new Softmax()
