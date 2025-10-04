@@ -31,10 +31,10 @@ VECTOR2D dot(VECTOR2D &a, VECTOR2D &b)
         int iter;
         int ax, xb;
         #pragma omp parallel for private(iter, ax, xb, sizebX, sizeaX, a, bT)
-        for(iter = 0; iter < sizeaX*sizebX; iter++)
+        for(iter = 0; iter < sizeaX*sizebY; iter++)
         {
-            ax = iter/sizebX;
-            xb = iter%sizebX;
+            ax = iter/sizebY;
+            xb = iter%sizebY;
             double rez = 0;
             for(int y = 0; y < sizebX; y++){
                 //std::cout << omp_get_thread_num() << "\n";
