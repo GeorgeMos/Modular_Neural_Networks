@@ -8,6 +8,7 @@
 #include <thread>
 
 //#define USE_OPENMP
+//#define OMP_DOT_MATRIX
 
 #ifdef USE_OPENMP
 #include <omp.h>

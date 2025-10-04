@@ -26,24 +26,42 @@ VECTOR2D dot(VECTOR2D &a, VECTOR2D &b)
         VECTOR2D bT = transpose(b);
         //sizebY becomes sizebX and vice-versa
 
-        double rez = 0;
         //Itterate x for a
-        #ifdef USE_OPENMP
-        #pragma omp parallel for collapse(2) private(rez)
+        #if defined(USE_OPENMP) || defined(OMP_DOT_MATRIX)
+        int iter;
+        int ax, xb;
+        #pragma omp parallel for private(iter, ax, xb, sizebX, sizeaX, a, bT)
+        for(iter = 0; iter < sizeaX*sizebX; iter++)
+        {
+            ax = iter/sizebX;
+            xb = iter%sizebX;
+            double rez = 0;
+            for(int y = 0; y < sizebX; y++){
+                //std::cout << omp_get_thread_num() << "\n";
+                rez += a[ax][y] * bT[xb][y];
+            }
+            #pragma omp critical
+            {
+            outMatrix[ax][xb] = rez;
+            }
+        }
         #endif
+
+        #if !(defined(USE_OPENMP) || defined(OMP_DOT_MATRIX))
         for(int ax = 0; ax < sizeaX; ax++){
             //Itterate x for b
             for(int xb = 0; xb < sizebY; xb++){
                 //Itterate y for a and b
+                double rez = 0;
                 for(int y = 0; y < sizebX; y++){
                     //std::cout << omp_get_thread_num() << "\n";
                     rez += a[ax][y] * bT[xb][y];
                 }
            
                 outMatrix[ax][xb] = rez;
-                rez = 0; 
             }
         }
+        #endif
         return outMatrix;
     }
     else{
